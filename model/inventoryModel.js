@@ -19,8 +19,8 @@ const inventoryModel = {
       .insert([
         {
           name: datos.nombre,
-          stock: datos.stock,
-          available: datos.disponible,
+          stock: Number(datos.stock),
+          available: Number(datos.disponible),
           description: datos.descripcion,
           branch: datos.rama,
         },
@@ -33,8 +33,8 @@ const inventoryModel = {
       .from("inventory")
       .update({
         name: datos.nombre,
-        stock: datos.stock,
-        available: datos.disponible,
+        stock: Number(datos.stock),
+        available: Number(datos.disponible),
         description: datos.descripcion,
         branch: datos.rama,
       })
